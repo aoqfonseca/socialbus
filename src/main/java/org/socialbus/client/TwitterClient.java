@@ -1,4 +1,4 @@
-package com.globo.client;
+package org.socialbus.client
 
 import java.util.List;
 

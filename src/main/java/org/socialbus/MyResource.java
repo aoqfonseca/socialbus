@@ -1,4 +1,4 @@
-package com.globo;
+package org.socialbus
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;

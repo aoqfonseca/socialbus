@@ -1,4 +1,4 @@
-package com.globo.client;
+package org.socalbus.client
 
 import org.junit.Before;
 import org.junit.Test;
