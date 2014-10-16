@@ -1,4 +1,4 @@
-package org.socialbus.client
+package org.socialbus.client;
 
 import java.util.List;
 
