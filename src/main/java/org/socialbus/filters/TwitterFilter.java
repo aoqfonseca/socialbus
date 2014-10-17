@@ -1,34 +1,40 @@
 package org.socialbus.filters;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class TwitterFilter {
 
-	private List<String> screenUserNames;
-	private List<String> hashTags;
+	private final List<String> screenNames;
+	private final List<String> hashtags;
+	public final String urlCallback;
 
-	public List<String> getScreenUserNames() {
-		return screenUserNames;
+	public TwitterFilter(String[] screenNames, String[] hashtags, String urlCallback) {
+		
+		this.screenNames = Collections.unmodifiableList(Arrays
+				.asList(screenNames));
+		
+		this.hashtags = Collections.unmodifiableList(Arrays
+				.asList(hashtags));
+		
+		this.urlCallback = urlCallback;
 	}
 
-	public void setScreenUserNames(List<String> screenUserNames) {
-		this.screenUserNames = screenUserNames;
+	public List<String> allScreenUsernames() {
+		return screenNames;
 	}
 
-	public List<String> getHashTags() {
-		return hashTags;
+	public List<String> allHashtags() {
+		return hashtags;
 	}
 
-	public void setHashTags(List<String> hashTags) {
-		this.hashTags = hashTags;
+	public boolean hasScreenNameUser(String screenName) {
+		return this.screenNames.contains(screenName);
 	}
 
-	public void addUser(String user) {
-		this.screenUserNames.add(user);
-	}
-
-	public void addHastags(String hashtag) {
-		this.screenUserNames.add(hashtag);
+	public boolean hasHashtag(String hashtag) {
+		return this.hashtags.contains(hashtag);
 	}
 
 }
