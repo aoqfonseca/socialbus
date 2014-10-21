@@ -9,6 +9,13 @@ public class TwitterListenerImpl implements TwitterListener {
 
 	@Override
 	public void onMessage(TwitterMessage message) {
+		filter.hasScreenNameUser(message.screenName);
 	}
+
+	public TwitterListenerImpl(TwitterFilter filter) {
+		this.filter = filter;
+	}
+	
+	
 
 }
