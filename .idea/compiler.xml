@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="SocialBus" />
+        <module name="social-bus" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="SocialBus" target="1.7" />
+      <module name="social-bus" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
