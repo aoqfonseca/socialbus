@@ -5,10 +5,16 @@ import org.socialbus.messages.TwitterMessage;
 
 public class TwitterListenerImpl implements TwitterListener {
 
-	public TwitterFilter filter;
+    public TwitterFilter filter;
 
-	@Override
-	public void onMessage(TwitterMessage message) {
-	}
+    public TwitterListenerImpl(TwitterFilter filter) {
+        this.filter = filter;
+    }
+
+    @Override
+    public void onMessage(TwitterMessage message) {
+        filter.hasScreenNameUser(message.screenName);
+    }
+
 
 }
